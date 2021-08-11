@@ -70,7 +70,7 @@ public class DraftServiceImpl implements DraftService {
 
     @Override
     public APIResponse restApiSample(String year) {
-        //String year = "2019" or "2020" only years available per API;
+        //String year = "2019", "2020" or "2021" only years available per API;
         RestTemplate restTemplate = new RestTemplate();
         //String url = "http://api.sportradar.us/draft/nba/trial/v1/en/2019/draft.json?api_key=v768p8e2w5vg4a8dxfjprfeq";
         String requestedUrl = "http://api.sportradar.us/draft/nba/trial/v1/en/" + year + "/draft.json?" + userIdAndKeySuffix;

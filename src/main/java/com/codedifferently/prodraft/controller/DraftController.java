@@ -22,8 +22,11 @@ public class DraftController {
     }
 
     @GetMapping("/draft/{year}")
-    public ResponseEntity<Draft> getDraftByYear(@PathVariable String year) {
-        return ResponseEntity.ok().body(draftService.getDraftByYear(year));
+    //public ResponseEntity<Draft> getDraftByYear(@PathVariable String year) {
+    //    return ResponseEntity.ok().body(draftService.getDraftByYear(year));
+    public ResponseEntity<APIResponse> getDraftByYear(@PathVariable String year) {
+        APIResponse apiResponse = draftService.restApiSample(year);
+        return new ResponseEntity<>(apiResponse,HttpStatus.OK);
     }
 
 //    @PostMapping("/drafts")
